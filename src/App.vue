@@ -103,9 +103,6 @@ export default {
     this.$store.dispatch('validateJwt')
   }
 }
-const audio = document.getElementById("myaudio");
-audio.volume = 0.2;
-
 </script>
 
 <style>
