@@ -46,6 +46,7 @@
 
 <script>
 import axios from 'axios'
+import BASEURL from '../fixtures/urls.js'
 
 export default {
   name: 'BoxofficeCommentForm',
@@ -82,10 +83,10 @@ export default {
       }
 
       let method = 'post'
-      let url = `http://127.0.0.1:8000/api/v1/community/${this.$props.movie.id}/post_boxoffice_comment/`
+      let url = `${BASEURL}/community/${this.$props.movie.id}/post_boxoffice_comment/`
       if (this.$props.beingUpdated) {
         method = 'put'
-        url = `http://127.0.0.1:8000/api/v1/community/update_boxoffice_comment/${this.$props.comment.id}/`
+        url = `${BASEURL}/community/update_boxoffice_comment/${this.$props.comment.id}/`
       }
 
       this.$store.dispatch('setTokenConfig')

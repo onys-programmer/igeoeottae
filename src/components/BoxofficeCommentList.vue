@@ -43,6 +43,7 @@
 import axios from 'axios'
 import BoxofficeCommentForm from './BoxofficeCommentForm.vue'
 import BoxofficeCommentListItem from './BoxofficeCommentListItem.vue'
+import BASEURL from '../fixtures/urls.js'
 
 export default {
   components: { 
@@ -73,7 +74,7 @@ export default {
       console.log('코멘트받아오기!')
       axios({
         method: 'get',
-        url: `http://127.0.0.1:8000/api/v1/community/${this.$props.movie.id}/get_boxoffice_comments/`
+        url: `${BASEURL}/community/${this.$props.movie.id}/get_boxoffice_comments/`
       })
         .then(response => {
           this.$data.comments = response.data
@@ -86,7 +87,7 @@ export default {
       // console.log(this.$store.state.config)
       axios({
         method: 'delete',
-        url: `http://127.0.0.1:8000/api/v1/community/delete_boxoffice_comment/${commentId}/`,
+        url: `${BASEURL}/community/delete_boxoffice_comment/${commentId}/`,
         headers: this.$store.state.config,
       })
         .then(response => {
