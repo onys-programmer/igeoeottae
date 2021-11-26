@@ -78,11 +78,12 @@
     </nav>
     <figure>
       <audio
-          autoplay
-          controls
-          src="./assets/sounds/boxofficeBgm.mp3">
-              Your browser does not support the
-              <code>audio</code> element.
+        id="myaudio"
+        autoplay
+        controls
+        src="./assets/sounds/boxofficeBgm.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
       </audio>
     </figure>
   </div>
@@ -102,6 +103,9 @@ export default {
     this.$store.dispatch('validateJwt')
   }
 }
+const audio = document.getElementById("myaudio");
+audio.volume = 0.2;
+
 </script>
 
 <style>
