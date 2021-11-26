@@ -1,3 +1,3 @@
-const BASEURL = 'http://igeoeottae.com/api/v1'
+const BASEURL = 'https://igeoeottae.com/api/v1'
 
 export default BASEURL
