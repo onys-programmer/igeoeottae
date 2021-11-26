@@ -26,6 +26,7 @@
 
 <script>
 import axios from 'axios'
+import BASEURL from '../fixtures/urls.js'
 
 export default {
   name: 'Login',
@@ -40,7 +41,7 @@ export default {
       event.preventDefault()  
       axios({
         method: 'post',
-        url: 'http://127.0.0.1:8000/api/v1/accounts/api_token_auth/',
+        url: `${BASEURL}/accounts/api_token_auth/`,
         data: {
           username: this.username,
           password: this.password,

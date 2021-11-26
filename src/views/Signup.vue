@@ -41,6 +41,7 @@
 import axios from 'axios'
 import Vue from 'vue'
 import SimpleVueValidation from 'simple-vue-validator'
+import BASEURL from '../fixtures/urls.js'
 
 Vue.use(SimpleVueValidation)
 
@@ -76,7 +77,7 @@ export default {
      event.preventDefault()
      axios({
        method: 'post',
-       url: 'http://127.0.0.1:8000/api/v1/accounts/signup/',
+       url: `${BASEURL}/accounts/signup/`,
        data: {
          username: this.username,
          password: this.password,
