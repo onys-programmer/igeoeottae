@@ -76,7 +76,7 @@
         </div>
       </div>
     </nav>
-    <figure>
+    <!-- <figure>
       <audio
         id="myaudio"
         autoplay
@@ -85,7 +85,7 @@
             Your browser does not support the
             <code>audio</code> element.
       </audio>
-    </figure>
+    </figure> -->
   </div>
 </template>
 
